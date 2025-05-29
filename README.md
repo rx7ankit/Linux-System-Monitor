@@ -76,8 +76,8 @@ enhanced-system-monitor/
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
-   cd enhanced-system-monitor
+   git clone <https://github.com/rx7ankit/Linux-System-Monitor/>
+   cd Linux-System-Monitor
    ```
 
 2. **Install dependencies:**
