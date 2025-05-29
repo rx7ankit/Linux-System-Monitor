@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Linux System Monitor</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>🖥️ Linux System Monitor</h1>
+    </header>
+    
+    <main>
+        <div id="dashboard">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>📊 CPU Usage</h3>
+                    <div class="chart-container">
+                        <canvas id="cpuChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>💾 Memory Usage</h3>
+                    <div class="chart-container">
+                        <canvas id="ramChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>💿 Disk Usage</h3>
+                    <div class="chart-container">
+                        <canvas id="diskChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="stats" class="stats-info"></div>
+        
+        <!-- Process Information Section -->
+        <div id="process-info" class="process-info">
+            <div class="process-header">
+                <div class="process-icon">⚙️</div>
+                <h2 class="process-title">Process Information</h2>
+                <button id="refresh-processes" class="refresh-btn small">🔄 Refresh</button>
+            </div>
+            <div class="process-content">
+                <div class="process-stats">
+                    <div class="process-stat-card">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-content">
+                            <span class="stat-number" id="total-processes">-</span>
+                            <span class="stat-label">Total Processes</span>
+                        </div>
+                    </div>
+                    <div class="process-stat-card">
+                        <div class="stat-icon">🟢</div>
+                        <div class="stat-content">
+                            <span class="stat-number" id="running-processes">-</span>
+                            <span class="stat-label">Running</span>
+                        </div>
+                    </div>
+                    <div class="process-stat-card">
+                        <div class="stat-icon">😴</div>
+                        <div class="stat-content">
+                            <span class="stat-number" id="sleeping-processes">-</span>
+                            <span class="stat-label">Sleeping</span>
+                        </div>
+                    </div>
+                    <div class="process-stat-card">
+                        <div class="stat-icon">🧟</div>
+                        <div class="stat-content">
+                            <span class="stat-number" id="zombie-processes">-</span>
+                            <span class="stat-label">Zombie</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="process-tables">
+                    <div class="process-table-container">
+                        <h4>🔥 Top CPU Processes</h4>
+                        <div class="process-table" id="cpu-processes">
+                            <div class="process-loading">Loading processes...</div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-table-container">
+                        <h4>🧠 Top Memory Processes</h4>
+                        <div class="process-table" id="memory-processes">
+                            <div class="process-loading">Loading processes...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- AI Analysis Box -->
+        <div class="ai-analysis">
+            <div class="ai-header">
+                <div class="ai-icon">🤖</div>
+                <h2 class="ai-title">AI Performance Analysis</h2>
+            </div>
+            <div id="ai-content" class="ai-content markdown-content">
+                <div class="ai-placeholder">
+                    <div class="placeholder-icon">🤖</div>
+                    <h3>Ready for Analysis</h3>
+                    <p>Click "Get AI Analysis" to receive comprehensive system performance insights powered by Gemini AI.</p>
+                </div>
+            </div>
+            <button id="refresh-analysis" class="refresh-btn">🧠 Get AI Analysis</button>
+        </div>
+    </main>
+    
+    <script src="js/app.js"></script>
+</body>
+
+</html>

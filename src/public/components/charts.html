@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>System Monitor Charts</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            margin: auto;
+            height: 40vh;
+            width: 80vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chart-container">
+        <canvas id="cpuChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="ramChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="diskChart"></canvas>
+    </div>
+
+    <script src="../js/charts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Dashboard - Linux System Monitor</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+    <div class="dashboard">
+        <h1>System Dashboard</h1>
+        <div class="charts">
+            <div class="chart-container">
+                <canvas id="cpuChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="ramChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="diskChart"></canvas>
+            </div>
+        </div>
+        <div class="stats">
+            <div class="stat">
+                <span class="label">CPU Load:</span> <span id="cpuLoad"></span>
+            </div>
+            <div class="stat">
+                <span class="label">Total Memory:</span> <span id="totalMem"></span>
+            </div>
+            <div class="stat">
+                <span class="label">Free Memory:</span> <span id="freeMem"></span>
+            </div>
+            <div class="stat">
+                <span class="label">Uptime:</span> <span id="uptime"></span>
+            </div>
+            <div class="stat">
+                <span class="label">Disk Usage:</span> <pre id="diskUsage"></pre>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/charts.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
